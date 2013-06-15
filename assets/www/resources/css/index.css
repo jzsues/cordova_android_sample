@@ -1,0 +1,50 @@
+.ui-grid-b img {
+    width: 64px;
+    height: 64px;
+    margin: 10px;
+}
+
+.ui-grid-b div {
+    padding: 5px;
+}
+
+.imgCaption {
+    width: 100%;
+    text-align: center;
+}
+
+.textCaption {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+
+
+ div[data-role="header"] > div {
+    padding: 8px 0 2px;
+    width: 100%;
+    text-align: left;
+    display: block;
+    margin: 0;
+}
+div[data-role="logo-img"]{
+    float: left;
+}
+div[data-role="logo-img"]  img{
+    height: 48px;
+    width: 48px;
+}
+div[data-role="logo-text"]{
+    float: left;
+}
+div[data-role="action-bar"]{
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+div[data-role="action-bar"] a{
+    margin: 0 auto;
+}
