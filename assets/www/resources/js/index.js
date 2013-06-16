@@ -45,23 +45,24 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener("resume", this.onResume, false);
         document.addEventListener("pause", this.onPause, false);
+
+
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady:function () {
-        navigator.notification.alert(
-            'Device ready,' + 'Device Name: ' + device.name + '<br />' +
-                'Device Cordova: ' + device.cordova + '<br />' +
-                'Device Platform: ' + device.platform + '<br />' +
-                'Device UUID: ' + device.uuid + '<br />' +
-                'Device Model: ' + device.model + '<br />' +
-                'Device Version: ' + device.version + '<br />', // message
-            this.alertDismissed, // callback
-            '提示', // title
-            'Done'                  // buttonName
-        );
+        window.addEventListener("batterystatus", function(info){
+            alert("Battery Level: " + info.level + " isPlugged: " + info.isPlugged);
+        }, false);
+        window.addEventListener("messageready", function(info){
+            alert('Message listener event arrived, arguments: ' + info);
+        }, false);
+
+    },
+    onMessageReady:function(){
+
     },
     onResume:function () {
         navigator.notification.beep(1);

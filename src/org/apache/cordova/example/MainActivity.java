@@ -22,7 +22,7 @@ package org.apache.cordova.example;
 import android.os.Bundle;
 import org.apache.cordova.*;
 
-public class example extends DroidGap {
+public class MainActivity extends DroidGap {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
